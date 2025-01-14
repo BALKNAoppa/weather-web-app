@@ -1,9 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import { CitiesFilter } from './utils/CitiesFilter';
-// import { SearchBar } from './components/SearchBar';
-
-
 
 function App() {
   const [countriesSearch, setCountriesSearch] = useState("");
