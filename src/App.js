@@ -1,63 +1,45 @@
 import './App.css';
+import React from 'react';
+import { SearchBar } from './components/SearchBar';
 import { useEffect, useState } from 'react';
-import { CitiesFilter } from './utils/CitiesFilter';
 
 function App() {
-  const [countriesSearch, setCountriesSearch] = useState("");
-  const [filteredData, setFilteredData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [cities, setCities] = useState([]);
-  const fetchData = async () => {
-    setLoading(true);
-    await fetch("https://countriesnow.space/api/v0.1/countries")
-      .then((response) => response.json())
-      .then((result) => {
-        const countriesAndCity = CitiesFilter(result);
-        setCities(countriesAndCity);
-        setFilteredData(countriesAndCity);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
-  const filterData = () => {
-    setFilteredData(
-      cities
-        .filter((city) =>
-          city.toLowerCase().startsWith(countriesSearch.toLowerCase())
-        )
-        .slice(0, 5)
-    );
+  const [selectedCity, setSelectedCity] = useState(["Ulaanbaatar"]);
+  const [weatherLoading, setWeatherLoading] = useState(false);
+  const [weather, setWeather] = useState([]);
+
+  const gerWeather = async () => {
+    setWeatherLoading(true);
+    const weatherApiKey = "7def0ab086d841c5a3521924251501"
+
+    try {
+      const response = await fetch(
+        `https://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=${selectedCity}`,
+        { method: "get", headers: { "Content-Type": "application/json" } }
+      );
+      const data = await response.json();
+      setWeather(data);
+      setWeatherLoading(false);
+    } catch (error) {
+      console.log("Error", error);
+      setWeatherLoading(false);
+    }
   };
 
   useEffect(() => {
-    filterData();
-  }, [countriesSearch]);
+    gerWeather();
+  }, [selectedCity]);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-  
-  const handleChange = (event) => {
-    setCountriesSearch(event.target.value);
-  };
   return (
     <div className="App">
-      {loading && <p>Loading...</p>}
+      <SearchBar />
+      {weatherLoading && <p>Loading...</p>}
       <div>
-        <input onChange={handleChange} placeholder='Search'/>
-      </div>
-      <div>
-        {
-          filteredData.map((country, index) => {
-            return <div key={index}>{country}</div>;
-          })}
+        {weather.map((city, index) => {
+          return <div key={index}>{city} </div>;
+        })}
       </div>
     </div>
   );
 };
 export default App;
-
