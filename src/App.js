@@ -22,12 +22,14 @@ function App() {
 
       const result = await response.json();
       console.log("Result", result);
-      
+
       const weatherData = {
         max_c: result.forecast.forecastday[0].day.maxtemp_c,
         min_c: result.forecast.forecastday[0].day.mintemp_c,
         condition: result.forecast.forecastday[0].day.condition.text,
         date: result.forecast.forecastday[0].date,
+        cityname: result.location.name,
+
       }
       setWeather(weatherData);
     } catch (error) {
@@ -43,11 +45,17 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-      <SearchBar setSelectedCity={setSelectedCity} />
-      <DaySide weather={weather} />
-      <NightSide weather={weather} />
-      {weatherLoading && <p>Loading...</p>}
+      <div className='main-container'>
+        <div className='search-bar-container'>
+        <SearchBar setSelectedCity={setSelectedCity}/>
+        </div>
+        <div className='day-side'>
+          <DaySide weather={weather} />
+        </div>
+        <div className='night-side'>
+          <NightSide weather={weather} />
+        </div>
+        {weatherLoading && <p>Loading...</p>}
       </div>
     </div>
   );

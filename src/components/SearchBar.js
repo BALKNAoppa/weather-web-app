@@ -48,16 +48,24 @@ export const SearchBar = (props) => {
     return (
         <div>
             <div>
-                <div>
-                    <input className="SearchBar" onChange={handleChange} placeholder="Search" />
+                <div className="input-container">
+                    <img src="./img/search.png" className="search-icon" />
+                    <input
+                        className="search-Bar"
+                        onChange={handleChange}
+                        placeholder="Search"
+                    />
                 </div>
                 {loading && <p>Loading...</p>}
-                <div>
+                <div className="founded-city-container">
                     {countriesSearch.length > 0 &&
                         filteredData.map((city, index) => {
                             return (
                                 <div onClick={() => handleCityClick(city)} key={index}>
-                                    <p>{city}</p>
+                                        <div className="founded-city">
+                                            <img src="./img/Vector.png" className="icon" />
+                                            {city}
+                                        </div>
                                 </div>
                             );
                         })}
