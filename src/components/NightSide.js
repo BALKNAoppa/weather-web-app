@@ -3,7 +3,7 @@ export const NightSide = (props) => {
     const { weather } = props;
     const getNightWeatherIcon = (condition) => {
         const icons = {
-            Sunny: "./img/icons/Day Sun.png"
+            Sunny: "./img/icons/Night Moon.png"
         };
         return icons[condition] || "./img/icons/Night Moon.png"
     };

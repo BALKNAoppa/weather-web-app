@@ -47,13 +47,15 @@ function App() {
     <div className="App">
       <div className='main-container'>
         <div className='search-bar-container'>
-        <SearchBar setSelectedCity={setSelectedCity}/>
+          <SearchBar setSelectedCity={setSelectedCity} />
         </div>
-        <div className='day-side'>
-          <DaySide weather={weather} />
-        </div>
-        <div className='night-side'>
-          <NightSide weather={weather} />
+        <div className='weather-container'>
+          <div className='day-side'>
+            <DaySide weather={weather} />
+          </div>
+          <div className='night-side'>
+            <NightSide weather={weather} />
+          </div>
         </div>
         {weatherLoading && <p>Loading...</p>}
       </div>

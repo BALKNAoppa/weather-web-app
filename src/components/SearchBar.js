@@ -47,29 +47,27 @@ export const SearchBar = (props) => {
     };
     return (
         <div>
-            <div>
-                <div className="input-container">
-                    <img src="./img/search.png" className="search-icon" />
-                    <input
-                        className="search-Bar"
-                        onChange={handleChange}
-                        placeholder="Search"
-                    />
-                </div>
-                {loading && <p>Loading...</p>}
-                <div className="founded-city-container">
-                    {countriesSearch.length > 0 &&
-                        filteredData.map((city, index) => {
-                            return (
-                                <div onClick={() => handleCityClick(city)} key={index}>
-                                        <div className="founded-city">
-                                            <img src="./img/Vector.png" className="icon" />
-                                            {city}
-                                        </div>
+            <div className="input-container">
+                <img src="./img/search.png" class="w-12 h-12" />
+                <input
+                    className="search-Bar"
+                    onChange={handleChange}
+                    placeholder="Search"
+                />
+            </div>
+            {loading && <p>Loading...</p>}
+            <div className="founded-city-container">
+                {countriesSearch.length > 0 &&
+                    filteredData.map((city, index) => {
+                        return (
+                            <div onClick={() => handleCityClick(city)} key={index}>
+                                <div className="founded-city">
+                                    <img class="w-12 h-12" src="./img/Vector.png" />
+                                    {city}
                                 </div>
-                            );
-                        })}
-                </div>
+                            </div>
+                        );
+                    })}
             </div>
         </div>
     );
