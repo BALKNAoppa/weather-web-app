@@ -43,10 +43,12 @@ function App() {
 
   return (
     <div className="App">
+      <div>
       <SearchBar setSelectedCity={setSelectedCity} />
       <DaySide weather={weather} />
       <NightSide weather={weather} />
       {weatherLoading && <p>Loading...</p>}
+      </div>
     </div>
   );
 };
