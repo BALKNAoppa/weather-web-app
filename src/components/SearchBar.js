@@ -15,7 +15,7 @@ export const SearchBar = (props) => {
             const response = await fetch("https://countriesnow.space/api/v0.1/countries");
             const data = await response.json();
             const citiesFilter = CitiesFilter(data.data);
-            
+
             setCities(citiesFilter);
             setFilteredData(citiesFilter);
             setLoading(false);
