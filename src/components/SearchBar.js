@@ -18,15 +18,12 @@ export const SearchBar = (props) => {
 
             setCities(citiesFilter);
             setFilteredData(citiesFilter);
-            setLoading(false);
         } catch (error) {
             console.log("Error", error);
-            setLoading(false);
         }
     }
 
     useEffect(() => {
-        console.log("useEffect fetch data worked");
         fetchData();
     }, []);
 

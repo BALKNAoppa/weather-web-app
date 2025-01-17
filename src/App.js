@@ -7,14 +7,14 @@ import { NightSide } from './components/NightSide';
 const weatherApiKey = "7def0ab086d841c5a3521924251501"
 
 function App() {
-  const [selectedCity, setSelectedCity] = useState(["Ulaanbaatar"]);
-  const [weatherLoading, setWeatherLoading] = useState(false);
+  const [selectedCity, setSelectedCity] = useState("Ulaanbaatar");
+  const [weatherLoading, setWeatherLoading] = useState(true);
   const [weather, setWeather] = useState({});
 
   const getWeather = async () => {
-    setWeatherLoading(true);
 
     try {
+
       const response = await fetch(
         `https://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=${selectedCity}`,
         { method: "get", headers: { "Content-Type": "application/json" } }
@@ -29,12 +29,12 @@ function App() {
         condition: result.forecast.forecastday[0].day.condition.text,
         date: result.forecast.forecastday[0].date,
         cityname: result.location.name,
-
       }
       setWeather(weatherData);
+      setWeatherLoading(false);
+
     } catch (error) {
       console.log("Error", error);
-    } finally {
       setWeatherLoading(false);
     }
   }
@@ -51,13 +51,13 @@ function App() {
         </div>
         <div className='weather-container'>
           <div className='day-side'>
-            <DaySide weather={weather} />
+            <DaySide weather={weather} weatherLoading={weatherLoading} />
           </div>
           <div className='night-side'>
-            <NightSide weather={weather} />
+            <NightSide weather={weather} weatherLoading={weatherLoading} />
           </div>
         </div>
-        {weatherLoading && <p>Loading...</p>}
+
       </div>
     </div>
   );
