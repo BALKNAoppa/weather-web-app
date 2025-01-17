@@ -28,7 +28,7 @@ export const DaySide = (props) => {
 
     return (
         <div className="DaySide">
-            <div className="date">{weather.date}</div>
+            <div className="date">TEST{weather.date}</div>
             <div className="cityname">{weather.cityname}</div>
             <img className="weather-icon" src={getDayWeatherIcon(weather.condition)} alt=""/>
             <div className="max-temp">{weather.max_c}°C</div>
