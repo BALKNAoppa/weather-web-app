@@ -53,3 +53,9 @@
 .weather-container {
     display: flex;
 }
+.day-side {
+    border-radius: 48px;
+}
+.night-side{
+    border-radius: 48px;
+}

@@ -1,4 +1,3 @@
-
 export const DaySide = (props) => {
     const { weather, weatherLoading } = props;
     console.log(weather)
@@ -31,7 +30,7 @@ export const DaySide = (props) => {
         <div className="DaySide">
             <div className="date">{weather.date}</div>
             <div className="cityname">{weather.cityname}</div>
-            <img className="weather-icon" src={getDayWeatherIcon(weather.condition)} />
+            <img className="weather-icon" src={getDayWeatherIcon(weather.condition)} alt=""/>
             <div className="max-temp">{weather.max_c}°C</div>
             <div className="condition">{weather.condition}</div>
         </div>

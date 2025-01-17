@@ -1,4 +1,3 @@
-import React from "react";
 export const NightSide = (props) => {
     const { weather, weatherLoading } = props;
     const getNightWeatherIcon = (condition) => {

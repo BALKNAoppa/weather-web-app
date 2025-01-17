@@ -2,12 +2,10 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { CitiesFilter } from "../utils/CitiesFilter";
 
-
 export const SearchBar = (props) => {
     const { setSelectedCity } = props;
     const [countriesSearch, setCountriesSearch] = useState("");
     const [filteredData, setFilteredData] = useState([]);
-    const [loading, setLoading] = useState(false);
     const [cities, setCities] = useState([]);
 
     const fetchData = async () => {
@@ -15,7 +13,6 @@ export const SearchBar = (props) => {
             const response = await fetch("https://countriesnow.space/api/v0.1/countries");
             const data = await response.json();
             const citiesFilter = CitiesFilter(data.data);
-
             setCities(citiesFilter);
             setFilteredData(citiesFilter);
         } catch (error) {
@@ -52,7 +49,6 @@ export const SearchBar = (props) => {
                     placeholder="Search"
                 />
             </div>
-            {loading && <p>Loading...</p>}
             <div className="founded-city-container">
                 {countriesSearch.length > 0 &&
                     filteredData.map((city, index) => {

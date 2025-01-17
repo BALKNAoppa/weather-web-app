@@ -45,7 +45,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className='main-container'>
+      <div class="w-screen h-screen bg-gray-100 flex items-center justify-center absolute z-10">
         <div className='search-bar-container'>
           <SearchBar setSelectedCity={setSelectedCity} />
         </div>
