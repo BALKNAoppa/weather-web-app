@@ -30,9 +30,13 @@
     height: 80px;
     cursor: pointer;
     border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .input-container{
     display: flex;
+    background-color: none;
 }
 .weather-icon{
     width: 274.09px;
@@ -58,4 +62,10 @@
 }
 .night-side{
     border-radius: 48px;
+}
+
+.founded-city{
+    display: flex;
+    align-items: center;
+    gap: 15px
 }

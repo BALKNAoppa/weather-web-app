@@ -44,7 +44,7 @@ export const SearchBar = (props) => {
             <div className="input-container">
                 <img src="./img/search.png" class="w-12 h-12" />
                 <input
-                    className="search-Bar"
+                    class="bg-blue-200 focus:bg-blue-300 text-gray-700 p-2 rounded"
                     onChange={handleChange}
                     placeholder="Search"
                 />
