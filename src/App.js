@@ -62,7 +62,7 @@ function App() {
           <img className='vecto3' src='./img/eclipce.png' />
           <img className='vecto4' src='./img/eclipce.png' />
           <div className='day-side'>
-            <DaySide weather={weather} weatherLoading={weatherLoading} />
+            <DaySide weather={weather} weatherLoading={weatherLoading}/>
           </div>
           <div className='sun-container'>
           <img className='sun' src='./img/Group 2.png' />
