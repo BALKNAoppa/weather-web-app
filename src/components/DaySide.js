@@ -28,11 +28,16 @@ export const DaySide = (props) => {
 
     return (
         <div className="DaySide">
-            <div className="date">{weather.date}</div>
-            <div className="cityname">{weather.cityname}</div>
-            <img className="weather-icon" src={getDayWeatherIcon(weather.condition)} alt=""/>
-            <div className="max-temp">{weather.max_c}°C</div>
-            <div className="condition">{weather.condition}</div>
+            <div className="top-container">
+                <div className="date">{weather.date}</div>
+                <div className="cityname">{weather.cityname}</div>
+            </div>
+            <img className="location-logo" src="./img/localization_icon.png"/>
+            <img className="weather-icon" src={getDayWeatherIcon(weather.condition)} alt="" />
+            <div className="buttom-container">
+                <div className="max-temp">{weather.max_c}°</div>
+                <div className="condition">{weather.condition}</div>
+            </div>
         </div>
     );
 };

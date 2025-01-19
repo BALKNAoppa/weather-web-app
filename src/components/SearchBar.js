@@ -42,22 +42,20 @@ export const SearchBar = (props) => {
     return (
         <div>
             <div className="input-container">
-                <img src="./img/Vector.png" class="w-12 h-12" />
+                <img src="./img/Vector.png" class="w-[34.98px] h-[34.98px] opacity-20 " />
                 <input
-                    class="bg-blue-200 focus:bg-blue-300 text-gray-700 p-2 rounded"
+                    class=" p-2 rounded w-[450px] h-[44px] font-bold border-none focus:outline-none focus:ring-0 placeholder-opacity-[20%]"
                     onChange={handleChange}
                     placeholder="Search"
                 />
             </div>
-            <div className="founded-city-container">
+            <div class= "absolute">
                 {countriesSearch.length > 0 &&
                     filteredData.map((city, index) => {
                         return (
-                            <div onClick={() => handleCityClick(city)} key={index}>
-                                <div className="founded-city">
-                                    <img class="w-12 h-12" src="./img/location.png" />
+                            <div className="founded-city" onClick={() => handleCityClick(city)} key={index}>
+                                    <img class="w-[23.33px] h-[33.33px] opacity-20" src="./img/location.png" />
                                     {city}
-                                </div>
                             </div>
                         );
                     })}

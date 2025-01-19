@@ -1,7 +1,8 @@
-.App{
+.App {
     font-family: Manrope;
 }
-.day-side{
+
+.day-side {
     width: 414px;
     height: 828px;
     background-color: rgba(255, 255, 255, 0.75);
@@ -11,7 +12,8 @@
     position: relative;
 
 }
-.night-side{
+
+.night-side {
     width: 414px;
     height: 828px;
     border-radius: 48px;
@@ -19,40 +21,50 @@
     backdrop-filter: blur(15px);
     z-index: 50;
 }
-.search-bar{
+
+.search-bar {
     width: 400px;
     height: 44px;
 }
-.input-container{
+
+.input-container {
     display: flex;
-    background-color: none;
+    justify-content: center;
+    align-items: center;
+    color: black;
 }
-.weather-icon{
-    width: 274.09px;
-    height: 274.09px;
-}
-.DaySide{
+.DaySide {
+    width: 414px;
+    height: 828px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
-.NightSide{
+
+.NightSide {
+    width: 414px;
+    height: 828px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
+
 .weather-container {
     display: flex;
 }
-.founded-city{
+
+.founded-city {
     display: flex;
     align-items: center;
-    gap: 15px
+    gap: 15px;
+    cursor: pointer;
 }
 
-.left{
+.left {
     flex-basis: 50%;
     height: 100vh;
     background-color: rgba(243, 244, 246, 1);
@@ -60,7 +72,8 @@
     align-items: center;
     justify-content: center;
 }
-.right{
+
+.right {
     height: 100vh;
     background-color: #0F141E;
     flex-basis: 50%;
@@ -68,22 +81,31 @@
     align-items: center;
     justify-content: center;
 }
-.search-bar-container{
+
+.search-bar-container {
     width: 512px;
     height: 80px;
-    cursor: pointer;
-    border: 1px solid black;
+    display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     border-radius: 48px;
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 32px;
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
 }
-.search-container{
+
+.search-container {
     position: absolute;
     display: flex;
     justify-items: center;
     top: 40px;
+    z-index: 99;
 }
-.pinecone-logo-container{
+
+.pinecone-logo-container {
     width: 140px;
     height: 140px;
     position: absolute;
@@ -95,97 +117,186 @@
     background-color: rgba(243, 244, 246, 1);
     border-radius: 100px;
 }
-.logo-left{
+
+.logo-left {
     width: 43.29px;
     height: 86px;
 }
-.logo-right{
+
+.logo-right {
     width: 43.29px;
     height: 86px;
 }
-.vector{
+
+.vector {
     height: 340px;
     position: absolute;
     z-index: 0;
     left: 50%;
-}.vector1{
+}
+
+.vector1 {
     height: 540px;
     position: absolute;
     z-index: 0;
     left: 50%;
 }
-.vector2{
+
+.vector2 {
     height: 940px;
     position: absolute;
     z-index: 0;
     left: 50%;
 }
-.vector3{
+
+.vector3 {
     height: 1340px;
     position: absolute;
     z-index: 0;
     left: 50%;
 }
-.vector4{
+
+.vector4 {
     height: 1740px;
     position: absolute;
     z-index: 0;
     left: 50%;
 }
-.vecto{
+
+.vecto {
     height: 340px;
     position: absolute;
     z-index: 0;
     right: 50%;
-}.vecto1{
+}
+
+.vecto1 {
     height: 540px;
     position: absolute;
     z-index: 0;
     right: 50%;
 }
-.vecto2{
+
+.vecto2 {
     height: 940px;
     position: absolute;
     z-index: 0;
     right: 50%;
 }
-.vecto3{
+
+.vecto3 {
     height: 1340px;
     position: absolute;
     z-index: 0;
     right: 50%;
 }
-.vecto4{
+
+.vecto4 {
     height: 1740px;
     position: absolute;
     z-index: 0;
     right: 50%;
 }
-.sun-container{
+
+.sun-container {
     width: 414px;
     height: 828px;
     border-radius: 48px;
     z-index: 0;
     position: absolute;
 }
-.sun{
+
+.sun {
     width: 176px;
     height: 176px;
     position: absolute;
     top: -70px;
     left: -70px;
 }
-.moon-container{
+
+.moon-container {
     width: 414px;
     height: 828px;
     border-radius: 48px;
     z-index: 0;
     position: absolute;
 }
-.moon{
+
+.moon {
     width: 128px;
     height: 128px;
     position: absolute;
     bottom: -60px;
     right: -60px;
+}
+
+.top-container {
+    width: 174px;
+    height: 91px;
+    position: absolute;
+    top: 56px;
+    left: 40px;
+}
+
+.cityname {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 65.57px;
+}
+.night-cityname{
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 65.57px;
+    color: rgba(255, 255, 255, 1);
+}
+.date{
+    color: rgba(107, 114, 128, 1);
+    font-family: 18px;
+    font-weight: 500;
+    line-height: 24.59px;
+}
+
+.location-logo {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 85px;
+    right: 40px;
+}
+
+.weather-icon {
+    width: 274.09px;
+    height: 274.09px;
+    position: absolute;
+    top: 204px;
+}
+
+.buttom-container {
+    width: 360px;
+    height: 230px;
+    position: absolute;
+    bottom: 128px;
+    z-index: 999;
+}
+.max-temp{
+    font-size: 120px;
+    font-weight: 800;
+    line-height: 196.7px;
+    background: linear-gradient(90deg, rgba(17, 24, 39, 1), rgba(107, 114, 128, 1)); 
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+.min-temp{
+    font-size: 120px;
+    font-weight: 800;
+    line-height: 196.7px;
+    background: linear-gradient(90deg, rgba(71, 79, 97, 1), rgba(151, 154, 160, 1)); 
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+.condition{
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32.78px;
+    color: rgba(255, 142, 39, 1);
 }

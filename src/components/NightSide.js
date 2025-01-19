@@ -26,11 +26,16 @@ export const NightSide = (props) => {
     }
     return (
         <div className="NightSide">
-            <div className="date">{weather.date}</div>
-            <div className="cityname">{weather.cityname}</div>
+            <div className="top-container" >
+                <div className="date">{weather.date}</div>
+                <div className="night-cityname">{weather.cityname}</div>
+            </div>
+            <img className="location-logo" src="./img/localization_icon.png" />
             <img className="weather-icon" src={getNightWeatherIcon(weather.condition)} alt="" />
-            <div className="min-temp">{weather.min_c}°C</div>
-            <div className="condition">{weather.condition}</div>
+            <div className="buttom-container">
+                <div className="min-temp">{weather.min_c}°</div>
+                <div className="condition">{weather.condition}</div>
+            </div>
         </div>
     );
 };
