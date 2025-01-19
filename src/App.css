@@ -5,15 +5,19 @@
     width: 414px;
     height: 828px;
     background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(15px);
     border-radius: 48px;
+    z-index: 50;
+    position: relative;
+
 }
 .night-side{
     width: 414px;
     height: 828px;
     border-radius: 48px;
     background-color: rgba(17, 24, 39, 0.75);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(15px);
+    z-index: 50;
 }
 .search-bar{
     width: 400px;
@@ -88,7 +92,7 @@
     justify-content: center;
     align-items: center;
     gap: 16px;
-    background-color: rgba(243, 244, 246, 1);;
+    background-color: rgba(243, 244, 246, 1);
     border-radius: 100px;
 }
 .logo-left{
@@ -98,4 +102,90 @@
 .logo-right{
     width: 43.29px;
     height: 86px;
+}
+.vector{
+    height: 340px;
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+}.vector1{
+    height: 540px;
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+}
+.vector2{
+    height: 940px;
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+}
+.vector3{
+    height: 1340px;
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+}
+.vector4{
+    height: 1740px;
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+}
+.vecto{
+    height: 340px;
+    position: absolute;
+    z-index: 0;
+    right: 50%;
+}.vecto1{
+    height: 540px;
+    position: absolute;
+    z-index: 0;
+    right: 50%;
+}
+.vecto2{
+    height: 940px;
+    position: absolute;
+    z-index: 0;
+    right: 50%;
+}
+.vecto3{
+    height: 1340px;
+    position: absolute;
+    z-index: 0;
+    right: 50%;
+}
+.vecto4{
+    height: 1740px;
+    position: absolute;
+    z-index: 0;
+    right: 50%;
+}
+.sun-container{
+    width: 414px;
+    height: 828px;
+    border-radius: 48px;
+    z-index: 0;
+    position: absolute;
+}
+.sun{
+    width: 176px;
+    height: 176px;
+    position: absolute;
+    top: -70px;
+    left: -70px;
+}
+.moon-container{
+    width: 414px;
+    height: 828px;
+    border-radius: 48px;
+    z-index: 0;
+    position: absolute;
+}
+.moon{
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    bottom: -60px;
+    right: -60px;
 }

@@ -47,22 +47,38 @@ function App() {
     <div className="App">
       <div class="w-full h-screen bg-gray-100 flex items-center justify-center absolute">
         <div className='pinecone-logo-container'>
-          <img className='logo-left' src='./img/left.png'/>
-          <img className='logo-right' src='./img/right.png'/>
+          <img className='logo-left' src='./img/left.png' />
+          <img className='logo-right' src='./img/right.png' />
         </div>
         <div className='search-container'>
           <div className='search-bar-container'>
-          <SearchBar setSelectedCity={setSelectedCity}/>
+            <SearchBar setSelectedCity={setSelectedCity} />
           </div>
         </div>
         <div className='left'>
+          <img className='vecto' src='./img/eclipce.png' />
+          <img className='vecto1' src='./img/eclipce.png' />
+          <img className='vecto2' src='./img/eclipce.png' />
+          <img className='vecto3' src='./img/eclipce.png' />
+          <img className='vecto4' src='./img/eclipce.png' />
           <div className='day-side'>
             <DaySide weather={weather} weatherLoading={weatherLoading} />
           </div>
+          <div className='sun-container'>
+          <img className='sun' src='./img/Group 2.png' />
+          </div>
         </div>
         <div className='right'>
+          <img className='vector' src='./img/Ellipse 25.png' />
+          <img className='vector1' src='./img/Ellipse 25.png' />
+          <img className='vector2' src='./img/Ellipse 25.png' />
+          <img className='vector3' src='./img/Ellipse 25.png' />
+          <img className='vector4' src='./img/Ellipse 25.png' />
           <div className='night-side'>
             <NightSide weather={weather} weatherLoading={weatherLoading} />
+          </div>
+          <div className='moon-container'>
+          <img className='moon' src='./img/Ellipse 22.png' />
           </div>
         </div>
       </div>
