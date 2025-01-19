@@ -45,22 +45,28 @@ function App() {
 
   return (
     <div className="App">
-      <div class="w-screen h-screen bg-gray-100 flex items-center justify-center absolute z-10">
-        <div className='search-bar-container'>
-          <SearchBar setSelectedCity={setSelectedCity} />
+      <div class="w-full h-screen bg-gray-100 flex items-center justify-center absolute">
+        <div className='pinecone-logo-container'>
+          <img className='logo-left' src='./img/left.png'/>
+          <img className='logo-right' src='./img/right.png'/>
         </div>
-        <div className='weather-container'>
+        <div className='search-container'>
+          <div className='search-bar-container'>
+          <SearchBar setSelectedCity={setSelectedCity}/>
+          </div>
+        </div>
+        <div className='left'>
           <div className='day-side'>
             <DaySide weather={weather} weatherLoading={weatherLoading} />
           </div>
+        </div>
+        <div className='right'>
           <div className='night-side'>
             <NightSide weather={weather} weatherLoading={weatherLoading} />
           </div>
         </div>
-
       </div>
     </div>
   );
 };
-
 export default App;

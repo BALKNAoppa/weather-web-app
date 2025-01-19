@@ -32,7 +32,7 @@ export const SearchBar = (props) => {
                 .filter((city) =>
                     city.toLowerCase().startsWith(event.target.value.toLowerCase())
                 )
-                .slice(0, 5)
+                .slice(0, 3)
         );
     };
 
@@ -42,7 +42,7 @@ export const SearchBar = (props) => {
     return (
         <div>
             <div className="input-container">
-                <img src="./img/search.png" class="w-12 h-12" />
+                <img src="./img/Vector.png" class="w-12 h-12" />
                 <input
                     class="bg-blue-200 focus:bg-blue-300 text-gray-700 p-2 rounded"
                     onChange={handleChange}
@@ -55,7 +55,7 @@ export const SearchBar = (props) => {
                         return (
                             <div onClick={() => handleCityClick(city)} key={index}>
                                 <div className="founded-city">
-                                    <img class="w-12 h-12" src="./img/Vector.png" />
+                                    <img class="w-12 h-12" src="./img/location.png" />
                                     {city}
                                 </div>
                             </div>
