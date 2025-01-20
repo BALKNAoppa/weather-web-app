@@ -22,7 +22,7 @@ export const NightSide = (props) => {
     };
 
     if (weatherLoading) {
-        return <p>Loading...</p>
+        return
     }
     return (
         <div class="w-[414px] h-[828px] flex flex-col items-center justify-center relative">

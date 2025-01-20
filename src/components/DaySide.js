@@ -23,7 +23,7 @@ export const DaySide = (props) => {
     };
 
     if (weatherLoading) {
-        return <p>Loading...</p>
+        return
     }
 
     return (
