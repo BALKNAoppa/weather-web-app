@@ -27,16 +27,16 @@ export const DaySide = (props) => {
     }
 
     return (
-        <div className="DaySide">
-            <div className="top-container">
-                <div className="date">{weather.date}</div>
-                <div className="cityname">{weather.cityname}</div>
+        <div class="w-[414px] h-[828px] flex flex-col items-center justify-center relative" >
+            <div class="w-[174px] h-[91px] absolute top-[56px] left-[40px]">
+                <div class="text-[#6b727f] text-[18px] font-medium leading-[24.59px]">{weather.date}</div>
+                <div class="text-[48px] font-extrabold leading-[65.57px]">{weather.cityname}</div>
             </div>
-            <img className="location-logo" src="./img/localization_icon.png"/>
-            <img className="weather-icon" src={getDayWeatherIcon(weather.condition)} alt="" />
-            <div className="buttom-container">
-                <div className="max-temp">{weather.max_c}°</div>
-                <div className="condition">{weather.condition}</div>
+            <img class="w-[32px] h-[32px] absolute top-[85px] right-[40px]" src="./img/localization_icon.png"/>
+            <img class="w-[274.09px] h-[274.09px] absolute top-[204px]" src={getDayWeatherIcon(weather.condition)} alt="" />
+            <div class="w-[360px] h-[230px] absolute bottom-[128px] z-[999]">
+                <div class="text-[120px] font-extrabold leading-[196.7px] bg-gradient-to-r from-[#111827] to-[#6b727f] bg-clip-text text-transparent">{weather.max_c}°</div>
+                <div class="text-[24px] font-extrabold leading-[32.78px] text-[#ff8e27]" >{weather.condition}</div>
             </div>
         </div>
     );

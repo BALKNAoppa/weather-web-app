@@ -44,41 +44,41 @@ function App() {
   }, [selectedCity]);
 
   return (
-    <div className="App">
-      <div class="w-full h-screen bg-gray-100 flex items-center justify-center absolute">
-        <div className='pinecone-logo-container'>
-          <img className='logo-left' src='./img/left.png' />
-          <img className='logo-right' src='./img/right.png' />
+    <div class="font-manrope">
+      <div class="w-full overflow-hidden h-screen bg-gray-100 flex items-center justify-center absolute">
+        <div class="w-[140px] h-[140px] absolute z-[99] flex justify-center items-center gap-4 bg-gray-100 rounded-full">
+          <img class="w-[43.29px] h-[86px]" src='./img/left.png' alt=''/>
+          <img class="w-[43.29px] h-[86px]" src='./img/right.png' alt=''/>
         </div>
-        <div className='search-container'>
-          <div className='search-bar-container'>
+        <div class="absolute flex justify-items-center top-[40px] z-[99]">
+          <div class="w-[512px] h-[80px] flex items-center justify-center rounded-[48px] bg-white text-[32px] pt-[16px] pr-[24px] pb-[16px] pl-[24px]" >
             <SearchBar setSelectedCity={setSelectedCity} />
           </div>
         </div>
-        <div className='left'>
-          <img className='vecto' src='./img/eclipce.png' />
-          <img className='vecto1' src='./img/eclipce.png' />
-          <img className='vecto2' src='./img/eclipce.png' />
-          <img className='vecto3' src='./img/eclipce.png' />
-          <img className='vecto4' src='./img/eclipce.png' />
-          <div className='day-side'>
+        <div class="basis-1/2 h-screen bg-gray-100 flex items-center justify-center">
+          <img class="h-[340px] absolute z-0 right-1/2" src='./img/eclipce.png' alt=''/>
+          <img class="h-[540px] absolute z-0 right-1/2" src='./img/eclipce.png'alt='' />
+          <img class="h-[940px] absolute z-0 right-1/2" src='./img/eclipce.png' alt=''/>
+          <img class="h-[1340px] absolute z-0 right-1/2" src='./img/eclipce.png' alt='' />
+          <img class="h-[1740px] absolute z-0 right-1/2" src='./img/eclipce.png' alt=''/>
+          <div class="w-[414px] h-[828px] bg-white/75 backdrop-blur-[15px] rounded-[48px] z-[50] relative">
             <DaySide weather={weather} weatherLoading={weatherLoading}/>
           </div>
-          <div className='sun-container'>
-          <img className='sun' src='./img/Group 2.png' />
+          <div class="w-[414px] h-[828px] rounded-[48px] z-0 absolute">
+          <img class="w-[176px] h-[176px] absolute top-[-70px] left-[-70px]" src='./img/Group 2.png' alt='' />
           </div>
         </div>
-        <div className='right'>
-          <img className='vector' src='./img/Ellipse 25.png' />
-          <img className='vector1' src='./img/Ellipse 25.png' />
-          <img className='vector2' src='./img/Ellipse 25.png' />
-          <img className='vector3' src='./img/Ellipse 25.png' />
-          <img className='vector4' src='./img/Ellipse 25.png' />
-          <div className='night-side'>
+        <div class="h-screen bg-[#0F141E] basis-1/2 flex items-center justify-center">
+          <img class="h-[340px] absolute z-0 left-1/2" src='./img/Ellipse 25.png' alt='' />
+          <img class="h-[540px] absolute z-0 left-1/2" src='./img/Ellipse 25.png' alt=''/>
+          <img class="h-[940px] absolute z-0 left-1/2" src='./img/Ellipse 25.png' alt='' />
+          <img class="h-[1340px] absolute z-0 left-1/2" src='./img/Ellipse 25.png' alt=''/>
+          <img class="h-[1740px] absolute z-0 left-1/2" src='./img/Ellipse 25.png'alt='' />
+          <div class="w-[414px] h-[828px] rounded-[48px] bg-[#111827]/75 backdrop-blur-[15px] z-[50]">
             <NightSide weather={weather} weatherLoading={weatherLoading} />
           </div>
-          <div className='moon-container'>
-          <img className='moon' src='./img/Ellipse 22.png' />
+          <div class="w-[414px] h-[828px] rounded-[48px] z-0 absolute">
+          <img class="w-[128px] h-[128px] absolute bottom-[-60px] right-[-60px]" src='./img/Ellipse 22.png' alt=''/>
           </div>
         </div>
       </div>

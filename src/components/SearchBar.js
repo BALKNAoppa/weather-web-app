@@ -32,7 +32,7 @@ export const SearchBar = (props) => {
                 .filter((city) =>
                     city.toLowerCase().startsWith(event.target.value.toLowerCase())
                 )
-                .slice(0, 3)
+                .slice(0, 5)
         );
     };
 
@@ -41,8 +41,8 @@ export const SearchBar = (props) => {
     };
     return (
         <div>
-            <div className="input-container">
-                <img src="./img/Vector.png" class="w-[34.98px] h-[34.98px] opacity-20 " />
+            <div class="flex justify-center items-center text-black" >
+                <img src="./img/Vector.png" class="w-[34.98px] h-[34.98px] opacity-20" alt="" />
                 <input
                     class=" p-2 rounded w-[450px] h-[44px] font-bold border-none focus:outline-none focus:ring-0 placeholder-opacity-[20%]"
                     onChange={handleChange}
@@ -53,8 +53,8 @@ export const SearchBar = (props) => {
                 {countriesSearch.length > 0 &&
                     filteredData.map((city, index) => {
                         return (
-                            <div className="founded-city" onClick={() => handleCityClick(city)} key={index}>
-                                    <img class="w-[23.33px] h-[33.33px] opacity-20" src="./img/location.png" />
+                            <div class="flex items-center gap-[15px] cursor-pointer" onClick={() => handleCityClick(city)} key={index}>
+                                    <img class="w-[23.33px] h-[33.33px] opacity-20" src="./img/location.png" alt=""/>
                                     {city}
                             </div>
                         );
