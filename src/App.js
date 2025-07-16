@@ -43,7 +43,7 @@ function App() {
   useEffect(() => {
     getWeather();
     helix.register();
-  }, [selectedCity, []]);
+  }, [selectedCity]);
 
   return (
     <div class="font-manrope">
