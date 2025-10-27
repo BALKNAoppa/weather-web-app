@@ -1,6 +1,5 @@
 export const DaySide = (props) => {
   const { weather, weatherLoading } = props;
-  console.log(weather);
   const getDayWeatherIcon = (condition) => {
     const lowerCondition = condition.toLowerCase();
     if (lowerCondition.includes("clear")) {
